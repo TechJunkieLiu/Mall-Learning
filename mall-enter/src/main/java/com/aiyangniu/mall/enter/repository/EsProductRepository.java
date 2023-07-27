@@ -1,0 +1,26 @@
+package com.aiyangniu.mall.enter.repository;
+
+import com.aiyangniu.mall.enter.model.es.EsProduct;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+
+/**
+ * 搜索商品ES操作类
+ *
+ * @author lzq
+ * @date 2023/05/13
+ */
+public interface EsProductRepository extends ElasticsearchRepository<EsProduct, Long> {
+
+    /**
+     * 搜索查询
+     *
+     * @param name 商品名称
+     * @param subTitle 商品标题
+     * @param keywords 商品关键字
+     * @param page 分页信息
+     * @return 分页商品信息
+     */
+    Page<EsProduct> findByNameOrSubTitleOrKeywords(String name, String subTitle, String keywords, Pageable page);
+}

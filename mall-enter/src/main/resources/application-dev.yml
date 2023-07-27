@@ -1,0 +1,66 @@
+server:
+  port: 9999
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mall?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    druid:
+      initial-size: 5   #连接池初始化大小
+      min-idle: 10  #最小空闲连接数
+      max-active: 20  #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"  #不统计这些请求数据
+      stat-view-servlet:  #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+  flyway:
+    enabled: true
+    encoding: UTF-8
+    locations: classpath:db/migration
+    sql-migration-prefix: V
+    sql-migration-separator: __
+    sql-migration-suffixes: .sql
+    validate-on-migrate: true  #迁移时是否进行校验
+    baseline-on-migrate: true  #当迁移发现数据库非空且存在没有元数据的表时，自动执行基准迁移，新建flyway_schema_history表（通过baseline命令可以生成该表）
+  redis:
+    host: localhost # Redis服务器地址
+    database: 0 # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+    password: # Redis服务器连接密码（默认为空）
+    timeout: 300ms # 连接超时时间（毫秒）
+
+  elasticsearch:
+    uris: localhost:9200
+
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+
+    mongodb:
+      host: localhost  #mongodb的连接地址
+      port: 27017  #mongodb的连接端口号
+      database: mall   #mongodb的连接的数据库
+
+  rabbitmq:
+    host: localhost  #rabbitmq的连接地址
+    port: 5672  #rabbitmq的连接端口号
+    virtual-host: /mall  #rabbitmq的虚拟host
+    username: mall  #rabbitmq的用户名
+    password: mall  #rabbitmq的密码
+
+minio:
+  endpoint: http://127.0.0.1:9090 #MinIO服务所在地址
+  bucketName: test3 #存储桶名称
+  accessKey: admin #访问的key
+  secretKey: 12345678 #访问的秘钥
+
+logging:
+  level:
+    root: info
+    com.aiyangniu.mall: debug
+
+logstash:
+  host: localhost
+  enableInnerLog: false

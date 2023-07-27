@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6d5f70e2-f809-44ff-8ff5-431c7edd6968" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\respository" />
+        <option name="mavenHome" value="D:/maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="dev" />
+      </list>
+    </option>
+    <option name="disabledProfiles">
+      <list>
+        <option value="jdk-1.8" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="2OiXaw7O2IhiWF6SXCN1k041bIQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/model/bo" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.13522537" />
+    <property name="project.structure.side.proportion" value="0.44745764" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace-learning1\mall-learning\mall-enter\src\main\java\com\aiyangniu\mall\enter\model\bo" />
+      <recent name="D:\workspace-learning1\mall-learning\mall-enter\src\main\java\com\aiyangniu\mall\enter\controller" />
+      <recent name="D:\workspace-learning1\mall-learning\document\quartz" />
+      <recent name="D:\workspace-learning1\mall-learning\mall-enter\src\main\resources" />
+      <recent name="D:\workspace-learning1\mall-learning\mall-enter\src\main\resources\sbin" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aiyangniu.mall.enter.controller" />
+      <recent name="com.aiyangniu.mall.enter.service" />
+      <recent name="com.aiyangniu.mall.enter.model.bo" />
+      <recent name="com.aiyangniu.mall.enter.quartz.config" />
+      <recent name="com.aiyangniu.mall.enter.quartz.config.job" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.aiyangniu.mall.enter.mapper" />
+      <recent name="com.aiyangniu.mall.enter.service" />
+      <recent name="com.aiyangniu.mall.enter.dto.ums" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 19 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 19 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="mall-enter" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RunManager" selected="Spring Boot.App">
+    <configuration name="AppTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mall-enter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aiyangniu.mall.enter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aiyangniu.mall.enter" />
+      <option name="MAIN_CLASS_NAME" value="com.aiyangniu.mall.enter.AppTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mall-enter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aiyangniu.mall.enter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aiyangniu.mall.enter" />
+      <option name="MAIN_CLASS_NAME" value="com.aiyangniu.mall.enter.AppTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mall-enter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aiyangniu.mall.enter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aiyangniu.mall.enter.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.App" />
+        <item itemvalue="JUnit.AppTests" />
+        <item itemvalue="JUnit.AppTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d5f70e2-f809-44ff-8ff5-431c7edd6968" name="Default Changelist" comment="" />
+      <created>1682044442365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682044442365</updated>
+      <workItem from="1682044446274" duration="181000" />
+      <workItem from="1682044670657" duration="1452000" />
+      <workItem from="1682046168379" duration="4115000" />
+      <workItem from="1682061829071" duration="4238000" />
+      <workItem from="1682066140571" duration="282000" />
+      <workItem from="1682066450505" duration="3223000" />
+      <workItem from="1682211901285" duration="45000" />
+      <workItem from="1682384599459" duration="4027000" />
+      <workItem from="1682394767343" duration="639000" />
+      <workItem from="1682400839541" duration="3584000" />
+      <workItem from="1682404489230" duration="1478000" />
+      <workItem from="1682406027638" duration="420000" />
+      <workItem from="1682406478791" duration="11653000" />
+      <workItem from="1682470978934" duration="2970000" />
+      <workItem from="1682500185200" duration="1588000" />
+      <workItem from="1682501988733" duration="1430000" />
+      <workItem from="1682556902538" duration="289000" />
+      <workItem from="1682559420924" duration="5452000" />
+      <workItem from="1682578786253" duration="201000" />
+      <workItem from="1682579558646" duration="170000" />
+      <workItem from="1682587038796" duration="854000" />
+      <workItem from="1682643715883" duration="1065000" />
+      <workItem from="1682663854225" duration="8747000" />
+      <workItem from="1683258763508" duration="57000" />
+      <workItem from="1683258904473" duration="5950000" />
+      <workItem from="1683340574323" duration="10655000" />
+      <workItem from="1683357867115" duration="9305000" />
+      <workItem from="1683508122964" duration="12952000" />
+      <workItem from="1683593706876" duration="6257000" />
+      <workItem from="1683625114659" duration="690000" />
+      <workItem from="1683686214442" duration="16000" />
+      <workItem from="1683686752149" duration="686000" />
+      <workItem from="1683883334888" duration="1018000" />
+      <workItem from="1683940832729" duration="7063000" />
+      <workItem from="1684112405058" duration="1258000" />
+      <workItem from="1684718612470" duration="4914000" />
+      <workItem from="1684912038943" duration="9894000" />
+      <workItem from="1684976454803" duration="2506000" />
+      <workItem from="1684984400689" duration="18286000" />
+      <workItem from="1685062369321" duration="8928000" />
+      <workItem from="1685085726483" duration="2555000" />
+      <workItem from="1685321614723" duration="44000" />
+      <workItem from="1685325396065" duration="15637000" />
+      <workItem from="1685350728132" duration="2413000" />
+      <workItem from="1685408069135" duration="26199000" />
+      <workItem from="1685494773062" duration="26130000" />
+      <workItem from="1685581124574" duration="18456000" />
+      <workItem from="1685605174776" duration="6481000" />
+      <workItem from="1685667358659" duration="3183000" />
+      <workItem from="1685927539480" duration="1377000" />
+      <workItem from="1685951384715" duration="569000" />
+      <workItem from="1685956117288" duration="12000" />
+      <workItem from="1686186174106" duration="11624000" />
+      <workItem from="1686204379421" duration="6579000" />
+      <workItem from="1686212137933" duration="4874000" />
+      <workItem from="1686272671412" duration="9290000" />
+      <workItem from="1686366135170" duration="5746000" />
+      <workItem from="1686386467518" duration="427000" />
+      <workItem from="1686387474836" duration="129000" />
+      <workItem from="1686387770933" duration="1355000" />
+      <workItem from="1686531209448" duration="78000" />
+      <workItem from="1686533517747" duration="5480000" />
+      <workItem from="1686539078078" duration="17580000" />
+      <workItem from="1686618858389" duration="17155000" />
+      <workItem from="1686704412129" duration="10934000" />
+      <workItem from="1686724471372" duration="4086000" />
+      <workItem from="1686790898622" duration="4154000" />
+      <workItem from="1686816264679" duration="1231000" />
+      <workItem from="1687225480054" duration="7268000" />
+      <workItem from="1687315724972" duration="11322000" />
+      <workItem from="1687655179026" duration="15218000" />
+      <workItem from="1687744233365" duration="3059000" />
+      <workItem from="1687941212019" duration="90000" />
+      <workItem from="1687941466174" duration="777000" />
+      <workItem from="1688109603114" duration="3243000" />
+      <workItem from="1688115157261" duration="3253000" />
+      <workItem from="1688432235664" duration="1856000" />
+      <workItem from="1688519581319" duration="47000" />
+      <workItem from="1688525207752" duration="17087000" />
+      <workItem from="1688605745189" duration="23860000" />
+      <workItem from="1688691553247" duration="16954000" />
+      <workItem from="1688721435899" duration="303000" />
+      <workItem from="1688951708539" duration="4796000" />
+      <workItem from="1688979122630" duration="3469000" />
+      <workItem from="1689036946747" duration="12135000" />
+      <workItem from="1689063987888" duration="1824000" />
+      <workItem from="1689219949308" duration="4774000" />
+      <workItem from="1689239210607" duration="2424000" />
+      <workItem from="1689296162661" duration="14000" />
+      <workItem from="1689305313795" duration="7998000" />
+      <workItem from="1689555741973" duration="9606000" />
+      <workItem from="1689642036313" duration="13901000" />
+      <workItem from="1689728559070" duration="13530000" />
+      <workItem from="1689901484313" duration="18276000" />
+      <workItem from="1690159830007" duration="3157000" />
+      <workItem from="1690246294133" duration="781000" />
+      <workItem from="1690268060756" duration="1803000" />
+      <workItem from="1690333027275" duration="2608000" />
+      <workItem from="1690421108623" duration="32000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="90" key="#Notifications" timestamp="1685605226468">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="90" key="#Notifications/0.0.1536.864@0.0.1536.864" timestamp="1685605226468" />
+    <state x="223" y="87" width="1164" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1682064084776">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="223" y="87" width="1164" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1682064084776" />
+    <state x="574" y="141" key="#com.intellij.ide.util.MemberChooser" timestamp="1689919957538">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="574" y="141" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1689919957538" />
+    <state x="223" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1688623136669">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="223" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1688623136669" />
+    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1689230473078">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1689230473078" />
+    <state x="344" y="150" width="969" height="655" key="#xdebugger.evaluate" timestamp="1689738556964">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="344" y="150" width="969" height="655" key="#xdebugger.evaluate/0.0.1536.864@0.0.1536.864" timestamp="1689738556964" />
+    <state width="514" height="466" key="DebuggerActiveHint" timestamp="1685523889349">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="514" height="466" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1685523889349" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1689230511891">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1689230511891" />
+    <state width="746" height="191" key="GridCell.Tab.0.bottom" timestamp="1690192726644">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="746" height="191" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1690192726644" />
+    <state width="746" height="191" key="GridCell.Tab.0.center" timestamp="1690192726643">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="746" height="191" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1690192726643" />
+    <state width="746" height="191" key="GridCell.Tab.0.left" timestamp="1690192726643">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="746" height="191" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1690192726643" />
+    <state width="746" height="191" key="GridCell.Tab.0.right" timestamp="1690192726643">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="746" height="191" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1690192726643" />
+    <state width="1493" height="302" key="GridCell.Tab.1.bottom" timestamp="1689932250053">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="302" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1689932250053" />
+    <state width="1493" height="302" key="GridCell.Tab.1.center" timestamp="1689932250053">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="302" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1689932250053" />
+    <state width="1493" height="302" key="GridCell.Tab.1.left" timestamp="1689932250053">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="302" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1689932250053" />
+    <state width="1493" height="302" key="GridCell.Tab.1.right" timestamp="1689932250053">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="302" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1689932250053" />
+    <state width="1493" height="302" key="GridCell.Tab.2.bottom" timestamp="1689932250054">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="302" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1689932250054" />
+    <state width="1493" height="302" key="GridCell.Tab.2.center" timestamp="1689932250053">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="302" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1689932250053" />
+    <state width="1493" height="302" key="GridCell.Tab.2.left" timestamp="1689932250053">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="302" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1689932250053" />
+    <state width="1493" height="302" key="GridCell.Tab.2.right" timestamp="1689932250053">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="302" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1689932250053" />
+    <state x="299" y="87" key="Maven.ArtifactSearchDialog" timestamp="1688952241599">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="299" y="87" key="Maven.ArtifactSearchDialog/0.0.1536.864@0.0.1536.864" timestamp="1688952241599" />
+    <state x="259" y="96" width="996" height="710" key="SettingsEditor" timestamp="1689057549729">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="259" y="96" width="996" height="710" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1689057549729" />
+    <state x="499" y="196" key="extract.method.dialog" timestamp="1683945886472">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="196" key="extract.method.dialog/0.0.1536.864@0.0.1536.864" timestamp="1683945886472" />
+    <state x="118" y="216" width="994" height="534" key="find.popup" timestamp="1689927094982">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="118" y="216" width="994" height="534" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1689927094982" />
+    <state x="449" y="174" width="905" height="666" key="new project wizard" timestamp="1683352224423">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="449" y="174" width="905" height="666" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1683352224423" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1685582781820">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1685582781820" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1689040319852">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1689040319852" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/service/impl/OmsPromotionServiceImpl.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/service/impl/OmsEnterOrderServiceImpl.java</url>
+          <line>288</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/component/CancelOrderSender.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/service/impl/SmsHomeNewProductServiceImpl.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/controller/SmsHomeNewProductController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/service/impl/SmsHomeNewProductServiceImpl.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/service/impl/PmsProductServiceImpl.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/controller/PmsProductController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/controller/PmsProductController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-common/src/main/java/com/aiyangniu/mall/common/component/RedisLockAspect.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-security/src/main/java/com/aiyangniu/mall/security/aspect/RedisCacheAspect.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/controller/HomeController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/component/CancelOrderReceiver.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/service/impl/OmsEnterOrderServiceImpl.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/controller/OmsEnterOrderController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/controller/PmsEnterProductController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/service/impl/PmsEnterProductServiceImpl.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mall-enter/src/main/java/com/aiyangniu/mall/enter/controller/HomeController.java</url>
+          <line>34</line>
+          <properties class="com.aiyangniu.mall.enter.controller.HomeController" method="content" />
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

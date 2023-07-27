@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="flyway-maven-plugin-8.5.11">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/flywaydb/flyway-maven-plugin/8.5.11/flyway-maven-plugin-8.5.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
