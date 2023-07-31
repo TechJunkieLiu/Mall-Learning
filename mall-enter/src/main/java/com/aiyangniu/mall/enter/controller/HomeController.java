@@ -28,6 +28,12 @@ import java.util.List;
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 public class HomeController {
 
+    @GetMapping(value = "/build")
+    public String data() {
+        System.out.println("=================== data ===================");
+        return "JenkinsTest";
+    }
+
     private final HomeService homeService;
 
     @ApiOperation("首页内容信息展示")
