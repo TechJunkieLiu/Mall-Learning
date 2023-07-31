@@ -31,6 +31,7 @@ public class HomeController {
     @GetMapping(value = "/build")
     public String data() {
         System.out.println("=================== data ===================");
+
         return "JenkinsTest";
     }
 
