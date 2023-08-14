@@ -4,7 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.URLUtil;
 import cn.hutool.json.JSONUtil;
 import com.aiyangniu.mall.common.domain.WebLog;
-import com.aiyangniu.mall.common.util.RequestUtil;
+import com.aiyangniu.mall.common.util.IpAddressUtil;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import net.logstash.logback.marker.Markers;
@@ -70,7 +70,7 @@ public class WebLogAspect {
         String urlStr = request.getRequestURL().toString();
         webLog.setBasePath(StrUtil.removeSuffix(urlStr, URLUtil.url(urlStr).getPath()));
         webLog.setUsername(request.getRemoteUser());
-        webLog.setIp(RequestUtil.getRequestIp(request));
+        webLog.setIp(IpAddressUtil.getIpAddress(request));
         webLog.setMethod(request.getMethod());
         webLog.setParameter(getParameter(method, joinPoint.getArgs()));
         webLog.setResult(result);
