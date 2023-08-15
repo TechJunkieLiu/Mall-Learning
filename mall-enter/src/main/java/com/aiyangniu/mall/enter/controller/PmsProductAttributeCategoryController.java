@@ -7,7 +7,6 @@ import com.aiyangniu.mall.enter.model.pojo.PmsProductAttributeCategory;
 import com.aiyangniu.mall.enter.service.PmsProductAttributeCategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +19,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/30
  */
-@Api(tags = "PmsProductAttributeCategoryController")
-@Tag(name = "PmsProductAttributeCategoryController", description = "商品属性分类管理")
+@Api(value = "PmsProductAttributeCategoryController", tags = "商品属性分类管理")
 @RestController
 @RequestMapping("/productAttribute/category")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

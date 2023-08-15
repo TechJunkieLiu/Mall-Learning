@@ -7,7 +7,6 @@ import com.aiyangniu.mall.enter.model.pojo.UmsMenu;
 import com.aiyangniu.mall.enter.service.UmsMenuService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +19,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/29
  */
-@Api(tags = "UmsMenuController")
-@Tag(name = "UmsMenuController", description = "后台菜单管理")
+@Api(value = "UmsMenuController", tags = "后台菜单管理")
 @RestController
 @RequestMapping("/menu")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

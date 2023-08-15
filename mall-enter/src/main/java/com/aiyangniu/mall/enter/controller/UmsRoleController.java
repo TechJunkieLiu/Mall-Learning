@@ -8,7 +8,6 @@ import com.aiyangniu.mall.enter.model.pojo.UmsRole;
 import com.aiyangniu.mall.enter.service.UmsRoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +20,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/08
  */
-@Api(tags = "UmsRoleController")
-@Tag(name = "UmsRoleController", description = "后台用户角色管理")
+@Api(value = "UmsRoleController", tags = "后台用户角色管理")
 @RestController
 @RequestMapping("/role")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

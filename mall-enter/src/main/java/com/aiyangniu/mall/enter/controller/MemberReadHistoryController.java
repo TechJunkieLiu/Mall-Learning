@@ -6,7 +6,6 @@ import com.aiyangniu.mall.enter.model.bo.MemberReadHistory;
 import com.aiyangniu.mall.enter.service.MemberReadHistoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,8 +19,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/22
  */
-@Api(tags = "MemberReadHistoryController")
-@Tag(name = "MemberReadHistoryController", description = "会员商品浏览记录管理")
+@Api(value = "MemberReadHistoryController", tags = "会员商品浏览记录管理")
 @RestController
 @RequestMapping("/member/readHistory")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

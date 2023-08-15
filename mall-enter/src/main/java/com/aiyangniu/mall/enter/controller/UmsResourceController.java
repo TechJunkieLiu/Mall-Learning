@@ -7,7 +7,6 @@ import com.aiyangniu.mall.enter.service.UmsResourceService;
 import com.aiyangniu.mall.security.component.DynamicSecurityMetadataSource;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +19,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/08
  */
-@Api(tags = "UmsResourceController")
-@Tag(name = "UmsResourceController", description = "后台资源管理")
+@Api(value = "UmsResourceController", tags = "后台资源管理")
 @RestController
 @RequestMapping("/resource")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

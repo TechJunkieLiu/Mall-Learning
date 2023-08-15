@@ -5,7 +5,6 @@ import com.aiyangniu.mall.enter.model.pojo.UmsMemberReceiveAddress;
 import com.aiyangniu.mall.enter.service.UmsMemberReceiveAddressService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +17,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/07/21
  */
-@Api(tags = "UmsMemberReceiveAddressController")
-@Tag(name = "UmsMemberReceiveAddressController", description = "会员收货地址管理")
+@Api(value = "UmsMemberReceiveAddressController", tags = "会员收货地址管理")
 @RestController
 @RequestMapping("/member/address")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

@@ -5,7 +5,6 @@ import com.aiyangniu.mall.enter.model.pojo.UmsResourceCategory;
 import com.aiyangniu.mall.enter.service.UmsResourceCategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +17,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/08
  */
-@Api(tags = "UmsResourceCategoryController")
-@Tag(name = "UmsResourceCategoryController", description = "后台资源分类管理")
+@Api(value = "UmsResourceCategoryController", tags = "后台资源分类管理")
 @RestController
 @RequestMapping("/resourceCategory")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

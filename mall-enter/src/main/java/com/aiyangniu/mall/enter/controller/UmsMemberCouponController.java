@@ -11,7 +11,6 @@ import com.aiyangniu.mall.enter.service.UmsMemberService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,8 +23,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/04/27
  */
-@Api(tags = "UmsMemberCouponController")
-@Tag(name = "UmsMemberCouponController", description = "会员优惠券管理")
+@Api(value = "UmsMemberCouponController", tags = "会员优惠券管理")
 @RestController
 @RequestMapping("/member/coupon")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

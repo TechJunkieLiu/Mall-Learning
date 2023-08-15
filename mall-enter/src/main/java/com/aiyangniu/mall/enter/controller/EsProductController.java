@@ -8,7 +8,6 @@ import com.aiyangniu.mall.enter.service.EsProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,8 +21,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/15
  */
-@Api(tags = "EsProductController")
-@Tag(name = "EsProductController", description = "ES搜索商品管理")
+@Api(value = "EsProductController", tags = "ES 搜索商品管理")
 @RestController
 @RequestMapping("/esProduct")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

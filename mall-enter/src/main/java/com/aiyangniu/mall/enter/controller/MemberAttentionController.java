@@ -6,7 +6,6 @@ import com.aiyangniu.mall.enter.model.bo.MemberBrandAttention;
 import com.aiyangniu.mall.enter.service.MemberAttentionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,8 +17,7 @@ import org.springframework.web.bind.annotation.*;
  * @author lzq
  * @date 2023/06/30
  */
-@Api(tags = "MemberAttentionController")
-@Tag(name = "MemberAttentionController", description = "会员关注品牌管理")
+@Api(value = "MemberAttentionController", tags = "会员关注品牌管理")
 @RestController
 @RequestMapping("/member/attention")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

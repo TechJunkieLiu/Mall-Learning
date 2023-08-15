@@ -7,7 +7,6 @@ import com.aiyangniu.mall.enter.model.pojo.PmsProduct;
 import com.aiyangniu.mall.enter.service.PmsEnterBrandService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +19,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/07/21
  */
-@Api(tags = "PmsEnterBrandController")
-@Tag(name = "PmsEnterBrandController", description = "前台商品品牌管理")
+@Api(value = "PmsEnterBrandController", tags = "前台商品品牌管理")
 @RestController
 @RequestMapping("/enterBrand")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

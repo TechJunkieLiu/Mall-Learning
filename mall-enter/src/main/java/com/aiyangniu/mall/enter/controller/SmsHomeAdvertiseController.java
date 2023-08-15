@@ -6,7 +6,6 @@ import com.aiyangniu.mall.enter.model.pojo.SmsHomeAdvertise;
 import com.aiyangniu.mall.enter.service.SmsHomeAdvertiseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +18,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/01
  */
-@Api(tags = "SmsHomeAdvertiseController")
-@Tag(name = "SmsHomeAdvertiseController", description = "首页轮播广告管理")
+@Api(value = "SmsHomeAdvertiseController", tags = "首页轮播广告管理")
 @RestController
 @RequestMapping("/home/advertise")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

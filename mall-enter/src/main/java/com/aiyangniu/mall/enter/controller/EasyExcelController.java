@@ -16,7 +16,6 @@ import com.alibaba.excel.write.metadata.holder.WriteSheetHolder;
 import com.alibaba.excel.write.metadata.holder.WriteTableHolder;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.SneakyThrows;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -39,8 +38,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/12
  */
-@Api(tags = "EasyExcelController")
-@Tag(name = "EasyExcelController", description = "EasyExcel导入导出测试")
+@Api(value = "EasyExcelController", tags = "EasyExcel 导入导出测试")
 @RestController
 @RequestMapping("/easyExcel")
 public class EasyExcelController {

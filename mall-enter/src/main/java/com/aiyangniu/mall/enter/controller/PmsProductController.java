@@ -22,8 +22,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/30
  */
-@Api(tags = "PmsProductController")
-@Tag(name = "PmsProductController", description = "商品管理")
+@Api(value = "PmsProductController", tags = "商品管理")
 @RestController
 @RequestMapping("/product")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

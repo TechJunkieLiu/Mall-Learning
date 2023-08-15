@@ -8,7 +8,6 @@ import com.aiyangniu.mall.enter.model.pojo.PmsProductCategory;
 import com.aiyangniu.mall.enter.service.HomeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +20,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/08
  */
-@Api(tags = "HomeController")
-@Tag(name = "HomeController", description = "首页内容管理")
+@Api(value = "HomeController", tags = "首页内容管理")
 @RestController
 @RequestMapping("/home")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

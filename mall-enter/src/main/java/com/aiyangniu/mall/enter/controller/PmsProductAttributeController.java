@@ -10,7 +10,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +22,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/30
  */
-@Api(tags = "PmsProductAttributeController")
-@Tag(name = "PmsProductAttributeController", description = "商品属性管理")
+@Api(value = "PmsProductAttributeController", tags = "商品属性管理")
 @RestController
 @RequestMapping("/productAttribute")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

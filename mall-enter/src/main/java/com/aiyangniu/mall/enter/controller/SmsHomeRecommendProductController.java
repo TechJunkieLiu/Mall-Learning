@@ -6,7 +6,6 @@ import com.aiyangniu.mall.enter.model.pojo.SmsHomeRecommendProduct;
 import com.aiyangniu.mall.enter.service.SmsHomeRecommendProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +18,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/21
  */
-@Api(tags = "SmsHomeRecommendProductController")
-@Tag(name = "SmsHomeRecommendProductController", description = "首页人气推荐管理")
+@Api(value = "SmsHomeRecommendProductController", tags = "首页人气推荐管理")
 @RestController
 @RequestMapping("/home/recommendProduct")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

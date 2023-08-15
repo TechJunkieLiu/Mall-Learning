@@ -6,7 +6,6 @@ import com.aiyangniu.mall.enter.model.pojo.SmsFlashPromotionSession;
 import com.aiyangniu.mall.enter.service.SmsFlashPromotionSessionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +18,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/15
  */
-@Api(tags = "SmsFlashPromotionSessionController")
-@Tag(name = "SmsFlashPromotionSessionController", description = "限时购场次管理")
+@Api(value = "SmsFlashPromotionSessionController", tags = "限时购场次管理")
 @RestController
 @RequestMapping("/flashSession")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

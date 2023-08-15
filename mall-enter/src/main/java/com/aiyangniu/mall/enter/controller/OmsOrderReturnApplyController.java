@@ -9,7 +9,6 @@ import com.aiyangniu.mall.enter.model.pojo.OmsOrderReturnApply;
 import com.aiyangniu.mall.enter.service.OmsOrderReturnApplyService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,8 +21,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/01
  */
-@Api(tags = "OmsOrderReturnApplyController")
-@Tag(name = "OmsOrderReturnApplyController", description = "订单退货申请管理")
+@Api(value = "OmsOrderReturnApplyController", tags = "订单退货申请管理")
 @RestController
 @RequestMapping("/returnApply")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

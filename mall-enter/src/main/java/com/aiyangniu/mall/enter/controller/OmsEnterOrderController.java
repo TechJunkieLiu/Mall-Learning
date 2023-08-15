@@ -9,7 +9,6 @@ import com.aiyangniu.mall.enter.service.OmsEnterOrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +22,7 @@ import java.util.Map;
  * @author lzq
  * @date 2023/05/22
  */
-@Api(tags = "OmsEnterOrderController")
-@Tag(name = "OmsEnterOrderController", description = "前台订单管理")
+@Api(value = "OmsEnterOrderController", tags = "前台订单管理")
 @RestController
 @RequestMapping("/enterOrder")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

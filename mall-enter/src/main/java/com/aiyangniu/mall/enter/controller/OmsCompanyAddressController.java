@@ -5,7 +5,6 @@ import com.aiyangniu.mall.enter.model.pojo.OmsCompanyAddress;
 import com.aiyangniu.mall.enter.service.OmsCompanyAddressService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +17,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/22
  */
-@Api(tags = "OmsCompanyAddressController")
-@Tag(name = "OmsCompanyAddressController", description = "收货地址管理")
+@Api(value = "OmsCompanyAddressController", tags = "收货地址管理")
 @RestController
 @RequestMapping("/companyAddress")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

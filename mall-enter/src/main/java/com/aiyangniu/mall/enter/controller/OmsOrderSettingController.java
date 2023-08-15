@@ -5,7 +5,6 @@ import com.aiyangniu.mall.enter.model.pojo.OmsOrderSetting;
 import com.aiyangniu.mall.enter.service.OmsOrderSettingService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +15,7 @@ import org.springframework.web.bind.annotation.*;
  * @author lzq
  * @date 2023/06/01
  */
-@Api(tags = "OmsOrderSettingController")
-@Tag(name = "OmsOrderSettingController", description = "订单设置管理")
+@Api(value = "OmsOrderSettingController", tags = "订单设置管理")
 @RestController
 @RequestMapping("/orderSetting")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

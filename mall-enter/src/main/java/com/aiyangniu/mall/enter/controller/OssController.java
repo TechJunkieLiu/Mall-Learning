@@ -6,7 +6,7 @@ import com.aiyangniu.mall.enter.model.bo.OssPolicyResult;
 import com.aiyangniu.mall.enter.service.OssService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
+import io.swagger.annotations.Authorization;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +19,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author lzq
  * @date 2023/05/29
  */
-@Api(tags = "OssController")
-@Tag(name = "OssController", description = "Oss对象存储管理")
+@Api(value = "OssController", tags = "Oss 对象存储管理")
 @RestController
 @RequestMapping("/aliyun/oss")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

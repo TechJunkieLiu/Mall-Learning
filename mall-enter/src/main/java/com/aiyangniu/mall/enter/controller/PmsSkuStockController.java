@@ -5,7 +5,6 @@ import com.aiyangniu.mall.enter.model.pojo.PmsSkuStock;
 import com.aiyangniu.mall.enter.service.PmsSkuStockService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +17,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/01
  */
-@Api(tags = "PmsSkuStockController")
-@Tag(name = "PmsSkuStockController", description = "商品SKU库存管理")
+@Api(value = "PmsSkuStockController", tags = "商品SKU库存管理")
 @RestController
 @RequestMapping("/sku")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

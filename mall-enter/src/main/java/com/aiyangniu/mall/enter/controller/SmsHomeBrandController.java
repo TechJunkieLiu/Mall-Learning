@@ -6,7 +6,6 @@ import com.aiyangniu.mall.enter.model.pojo.SmsHomeBrand;
 import com.aiyangniu.mall.enter.service.SmsHomeBrandService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +18,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/06/08
  */
-@Api(tags = "SmsHomeBrandController")
-@Tag(name = "SmsHomeBrandController", description = "首页品牌推荐管理")
+@Api(value = "SmsHomeBrandController", tags = "首页品牌推荐管理")
 @RestController
 @RequestMapping("/home/brand")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

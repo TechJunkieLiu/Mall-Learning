@@ -12,7 +12,6 @@ import com.aiyangniu.mall.enter.service.UmsAdminService;
 import com.aiyangniu.mall.enter.service.UmsRoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -32,8 +31,7 @@ import java.util.stream.Collectors;
  * @author lzq
  * @date 2023/04/25
  */
-@Api(tags = "UmsAdminController")
-@Tag(name = "UmsAdminController", description = "后台用户管理")
+@Api(value = "UmsAdminController", tags = "后台用户管理")
 @RestController
 @RequestMapping("/admin")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

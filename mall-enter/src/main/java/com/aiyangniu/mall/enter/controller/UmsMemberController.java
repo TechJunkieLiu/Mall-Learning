@@ -5,7 +5,6 @@ import com.aiyangniu.mall.enter.model.pojo.UmsMember;
 import com.aiyangniu.mall.enter.service.UmsMemberService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,8 +23,7 @@ import java.util.Map;
  * @author lzq
  * @date 2023/04/27
  */
-@Api(tags = "UmsMemberController")
-@Tag(name = "UmsMemberController", description = "会员登录注册管理")
+@Api(value = "UmsMemberController", tags = "会员登录注册管理")
 @RestController
 @RequestMapping("/sso")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

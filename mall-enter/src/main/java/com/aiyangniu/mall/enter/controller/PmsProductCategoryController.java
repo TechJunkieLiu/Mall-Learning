@@ -8,7 +8,6 @@ import com.aiyangniu.mall.enter.model.pojo.PmsProductCategory;
 import com.aiyangniu.mall.enter.service.PmsProductCategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -22,8 +21,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/30
  */
-@Api(tags = "PmsProductCategoryController")
-@Tag(name = "PmsProductCategoryController", description = "商品分类管理")
+@Api(value = "PmsProductCategoryController", tags = "商品分类管理")
 @RestController
 @RequestMapping("/productCategory")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

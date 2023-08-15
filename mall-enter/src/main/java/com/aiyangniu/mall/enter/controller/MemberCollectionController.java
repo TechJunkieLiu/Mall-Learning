@@ -6,7 +6,6 @@ import com.aiyangniu.mall.enter.model.bo.MemberProductCollection;
 import com.aiyangniu.mall.enter.service.MemberCollectionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,8 +17,7 @@ import org.springframework.web.bind.annotation.*;
  * @author lzq
  * @date 2023/06/30
  */
-@Api(tags = "MemberCollectionController")
-@Tag(name = "MemberCollectionController", description = "会员收藏管理")
+@Api(value = "MemberCollectionController", tags = "会员收藏管理")
 @RestController
 @RequestMapping("/member/productCollection")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)

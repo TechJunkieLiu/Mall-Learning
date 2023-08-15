@@ -22,7 +22,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/31
  */
-@Api(tags = "PmsBrandController")
+@Api(value = "", tags = "PmsBrandController")
 @Tag(name = "PmsBrandController", description = "商品品牌管理")
 @RestController
 @RequestMapping("/brand")

@@ -8,7 +8,6 @@ import com.aiyangniu.mall.enter.model.bo.MinioUpload;
 import io.minio.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +25,7 @@ import java.util.Date;
  * @date 2023/05/30
  */
 @Slf4j
-@Api(tags = "MinioController")
-@Tag(name = "MinioController", description = "MinIO对象存储管理")
+@Api(value = "MinioController", tags = "MinIO 对象存储管理")
 @RestController
 @RequestMapping("/minio")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
