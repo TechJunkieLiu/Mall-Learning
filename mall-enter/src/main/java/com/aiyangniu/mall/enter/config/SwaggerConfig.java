@@ -2,6 +2,7 @@ package com.aiyangniu.mall.enter.config;
 
 import com.aiyangniu.mall.common.config.BaseSwaggerConfig;
 import com.aiyangniu.mall.common.domain.SwaggerProperties;
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +14,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author lzq
  * @date 2023/04/28
  */
-@Configuration
 @EnableSwagger2
+@EnableKnife4j
+@Configuration
 public class SwaggerConfig extends BaseSwaggerConfig {
 
     @Override
