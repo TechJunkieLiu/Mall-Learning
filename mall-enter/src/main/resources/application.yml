@@ -54,6 +54,7 @@ secure:
       - /brand/**
       - /menu/**
       - /order/**
+      - /easyPoi/**
 
 # 消息队列定义
 rabbitmq:
