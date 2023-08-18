@@ -3,19 +3,24 @@ package com.aiyangniu.mall.enter.controller.excel;
 import com.aiyangniu.mall.common.util.ExcelUtils.poi.ExcelExport;
 import com.aiyangniu.mall.common.util.ExcelUtils.poi.ExcelImport;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * 导入订单模板对象
+ * 订单模板对象
  *
  * @author lzq
  * @date 2023/08/16
  */
 @Data
-public class OmsOrder {
+@TableName(value = "oms_order")
+public class OmsOrderForPoi implements Serializable {
+
+    private static final long serialVersionUID = -682894331013103786L;
 
     /** 行号 **/
     @TableField(exist = false)

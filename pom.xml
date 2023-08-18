@@ -42,8 +42,8 @@
         <logstash-logback.version>7.2</logstash-logback.version>
         <minio.version>8.4.5</minio.version>
         <easyexcel.version>3.0.5</easyexcel.version>
-        <poi-ooxml.version>3.16</poi-ooxml.version>
-        <poi.version>3.16</poi.version>
+        <poi-ooxml.version>4.1.2</poi-ooxml.version>
+        <poi.version>4.1.2</poi.version>
         <httpmime.version>4.5.3</httpmime.version>
         <fastjson.version>1.2.83</fastjson.version>
         <flyway-core.version>4.1.2</flyway-core.version>

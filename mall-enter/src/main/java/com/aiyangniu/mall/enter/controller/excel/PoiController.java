@@ -1,10 +1,11 @@
 package com.aiyangniu.mall.enter.controller.excel;
 
 import com.aiyangniu.mall.common.util.ExcelUtils.poi.ExcelUtil;
-import com.aiyangniu.mall.enter.mapper.OmsOrderExcelMapper;
+import com.aiyangniu.mall.enter.mapper.OmsOrderPoiExcelMapper;
 import com.alibaba.fastjson.JSONArray;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.swagger.annotations.Api;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -24,10 +25,10 @@ import java.util.*;
 @Api(value = "PoiController", tags = "Poi 导入导出测试")
 @RestController
 @RequestMapping("/poi")
+@RequiredArgsConstructor(onConstructor_ = @Autowired)
 public class PoiController {
 
-    @Autowired
-    private OmsOrderExcelMapper omsOrderExcelMapper;
+    private final OmsOrderPoiExcelMapper omsOrderPoiExcelMapper;
 
     /**
      * 导入解析为JSON
@@ -44,8 +45,8 @@ public class PoiController {
      */
     @PostMapping("/importForObj")
     public void importForObj(@RequestPart("file") MultipartFile file) throws Exception {
-        List<OmsOrder> orderList = ExcelUtil.readMultipartFile(file, OmsOrder.class);
-        for (OmsOrder order : orderList) {
+        List<OmsOrderForPoi> orderList = ExcelUtil.readMultipartFile(file, OmsOrderForPoi.class);
+        for (OmsOrderForPoi order : orderList) {
             System.out.println(order.toString());
         }
     }
@@ -169,8 +170,8 @@ public class PoiController {
      */
     @GetMapping("/export")
     public void export(HttpServletResponse response) {
-        List<OmsOrder> orderList = omsOrderExcelMapper.selectList(new LambdaQueryWrapper<>());
-        ExcelUtil.export(response, "订单表", orderList, OmsOrder.class);
+        List<OmsOrderForPoi> orderList = omsOrderPoiExcelMapper.selectList(new LambdaQueryWrapper<>());
+        ExcelUtil.export(response, "订单表", orderList, OmsOrderForPoi.class);
         // 导出模板（测试实体标签 example）
 //        ExcelUtil.exportTemplate(response, "订单表", OmsOrder.class, true);
     }
