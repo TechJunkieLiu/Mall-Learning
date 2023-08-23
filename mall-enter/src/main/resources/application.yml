@@ -1,8 +1,8 @@
 spring:
   application:
-    name: mall-enter
+    name: mall-learning
   profiles:
-    active: dev #默认为开发环境
+    active: @profiles.active@
   servlet:
     multipart:
       enabled: true  #开启文件上传

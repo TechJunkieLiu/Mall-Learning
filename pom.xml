@@ -57,6 +57,7 @@
         <thumbnailator.version>0.4.19</thumbnailator.version>
         <mall-common.version>1.0.0-SNAPSHOT</mall-common.version>
         <mall-security.version>1.0.0-SNAPSHOT</mall-security.version>
+        <flyway-maven-plugin.version>4.0</flyway-maven-plugin.version>
     </properties>
 
     <!-- 依赖配置：这里配置的依赖所引入的jar包在此工程下的所有子工程都会被引入 -->
@@ -265,22 +266,22 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- 配置不同的环境 -->
+    <!-- 配置环境 -->
     <profiles>
         <profile>
             <id>dev</id>
             <properties>
-                <profile>dev</profile>
+                <profiles.active>dev</profiles.active>
             </properties>
-            <!-- 默认环境 -->
+            <!-- 是否默认 -->
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
         <profile>
-            <id>pro</id>
+            <id>prod</id>
             <properties>
-                <profile>pro</profile>
+                <profiles.active>prod</profiles.active>
             </properties>
         </profile>
     </profiles>
@@ -295,7 +296,7 @@
                 <plugin>
                     <groupId>org.flywaydb</groupId>
                     <artifactId>flyway-maven-plugin</artifactId>
-                    <version>4.0</version>
+                    <version>${flyway-maven-plugin.version}</version>
                     <configuration>
                         <url>jdbc:mysql://localhost:3306/mall?characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</url>
                         <user>root</user>
@@ -303,7 +304,36 @@
                         <driver>com.mysql.jdbc.Driver</driver>
                     </configuration>
                 </plugin>
+            </plugins>
+        </pluginManagement>
 
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
+
+<!--        <pluginManagement>-->
+<!--            <plugins>-->
+<!--                <plugin>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                </plugin>-->
+<!--                <plugin>-->
+<!--                    <groupId>org.flywaydb</groupId>-->
+<!--                    <artifactId>flyway-maven-plugin</artifactId>-->
+<!--                    <version>4.0</version>-->
+<!--                    <configuration>-->
+<!--                        <url>jdbc:mysql://localhost:3306/mall?characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</url>-->
+<!--                        <user>root</user>-->
+<!--                        <password>root</password>-->
+<!--                        <driver>com.mysql.jdbc.Driver</driver>-->
+<!--                    </configuration>-->
+<!--                </plugin>-->
 <!--                <plugin>-->
 <!--                    <groupId>io.fabric8</groupId>-->
 <!--                    <artifactId>docker-maven-plugin</artifactId>-->
@@ -348,8 +378,8 @@
 <!--                        </images>-->
 <!--                    </configuration>-->
 <!--                </plugin>-->
-            </plugins>
-        </pluginManagement>
-    </build>
+<!--            </plugins>-->
+<!--        </pluginManagement>-->
 
+    </build>
 </project>
