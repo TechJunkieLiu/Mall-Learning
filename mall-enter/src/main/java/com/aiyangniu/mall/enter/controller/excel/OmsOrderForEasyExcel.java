@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * 数据导出的Excel模板实体
+ * 订单导出实体、模板对象
  *
  * @author lzq
  * @date 2023/08/18

@@ -44,6 +44,8 @@
         <easyexcel.version>3.0.5</easyexcel.version>
         <poi-ooxml.version>4.1.2</poi-ooxml.version>
         <poi.version>4.1.2</poi.version>
+        <easypoi-spring-boot-starter.version>4.4.0</easypoi-spring-boot-starter.version>
+        <easypoi-base.version>4.4.0</easypoi-base.version>
         <httpmime.version>4.5.3</httpmime.version>
         <fastjson.version>1.2.83</fastjson.version>
         <flyway-core.version>4.1.2</flyway-core.version>
@@ -143,13 +145,12 @@
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
-            <!--MyBatis分页插件starter-->
+            <!--MyBatis分页插件-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${pagehelper-starter.version}</version>
             </dependency>
-            <!--MyBatis分页插件-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper</artifactId>
@@ -215,7 +216,7 @@
                 <artifactId>easyexcel</artifactId>
                 <version>${easyexcel.version}</version>
             </dependency>
-            <!-- POI -->
+            <!-- Poi -->
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>
@@ -225,6 +226,17 @@
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
                 <version>${poi-ooxml.version}</version>
+            </dependency>
+            <!-- EasyPoi -->
+            <dependency>
+                <groupId>cn.afterturn</groupId>
+                <artifactId>easypoi-spring-boot-starter</artifactId>
+                <version>${easypoi-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.afterturn</groupId>
+                <artifactId>easypoi-base</artifactId>
+                <version>${easypoi-base.version}</version>
             </dependency>
             <!-- 文件上传 -->
             <dependency>

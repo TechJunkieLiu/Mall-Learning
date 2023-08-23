@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * 订单模板对象
+ * 订单导入导出实体、模板对象
  *
  * @author lzq
  * @date 2023/08/16

@@ -7,6 +7,8 @@ spring:
     multipart:
       enabled: true  #开启文件上传
       max-file-size: 10MB  #限制文件上传大小为10M
+  main:
+    allow-bean-definition-overriding: true  #EasyPoi启用覆盖
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher   #高版本SpringBoot2.7.0整合Swagger3问题，更改MVC路径匹配策略为AntPathMatcher
@@ -57,6 +59,7 @@ secure:
       - /order/**
       - /poi/**
       - /easyExcel/**
+      - /easyPoi/**
 
 # 消息队列定义
 rabbitmq:
