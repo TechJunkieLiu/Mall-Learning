@@ -1,6 +1,7 @@
 package com.aiyangniu.mall.enter;
 
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
@@ -13,6 +14,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @date 2023/04/21
  */
 @Slf4j
+@MapperScan("com.aiyangniu.mall.enter.repository")
 @SpringBootApplication(scanBasePackages = "com.aiyangniu.mall", exclude = {FlywayAutoConfiguration.class})
 public class App {
 

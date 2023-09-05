@@ -29,12 +29,12 @@ spring:
     port: 6379 # Redis服务器连接端口
     password: # Redis服务器连接密码（默认为空）
     timeout: 300ms # 连接超时时间（毫秒）
-  elasticsearch:
-    uris: localhost:9200
+#  elasticsearch:
+#    uris: localhost:9200
   data:
     elasticsearch:
       repositories:
-        enabled: true
+        enabled: false  #指定是否启用ES存储库
     mongodb:
       host: localhost  #mongodb的连接地址
       port: 27017  #mongodb的连接端口号
