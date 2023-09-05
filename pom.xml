@@ -294,6 +294,7 @@
     </profiles>
 
     <build>
+        <finalName>mall-learning</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -313,7 +314,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
