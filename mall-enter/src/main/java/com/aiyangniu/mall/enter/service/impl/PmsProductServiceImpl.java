@@ -187,10 +187,10 @@ public class PmsProductServiceImpl implements PmsProductService {
         PmsProduct product = new PmsProduct();
         product.setVerifyStatus(verifyStatus);
         int count = pmsProductMapper.update(product, new LambdaQueryWrapper<PmsProduct>().in(PmsProduct::getId, ids));
-        List<PmsProductVertifyRecord> list = new ArrayList<>();
+        List<PmsProductVerifyRecord> list = new ArrayList<>();
         // 修改完审核状态后插入审核记录
         for (Long id : ids) {
-            PmsProductVertifyRecord record = new PmsProductVertifyRecord();
+            PmsProductVerifyRecord record = new PmsProductVerifyRecord();
             record.setProductId(id);
             record.setCreateTime(new Date());
             record.setDetail(detail);

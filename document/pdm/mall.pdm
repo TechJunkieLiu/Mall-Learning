@@ -8725,8 +8725,8 @@ LABL 0 新宋体,8,N</a:FontList>
 </o:Table>
 <o:Table Id="o237">
 <a:ObjectID>B9FC590F-46F6-4235-8672-FF13B2E50A77</a:ObjectID>
-<a:Name>pms_product_vertify_record</a:Name>
-<a:Code>pms_product_vertify_record</a:Code>
+<a:Name>pms_product_verify_record</a:Name>
+<a:Code>pms_product_verify_record</a:Code>
 <a:CreationDate>1521710820</a:CreationDate>
 <a:Creator>zhenghong</a:Creator>
 <a:ModificationDate>1521770349</a:ModificationDate>

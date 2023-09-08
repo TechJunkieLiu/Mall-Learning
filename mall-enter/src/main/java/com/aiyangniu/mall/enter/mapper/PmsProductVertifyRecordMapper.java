@@ -1,6 +1,6 @@
 package com.aiyangniu.mall.enter.mapper;
 
-import com.aiyangniu.mall.enter.model.pojo.PmsProductVertifyRecord;
+import com.aiyangniu.mall.enter.model.pojo.PmsProductVerifyRecord;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -19,5 +19,5 @@ public interface PmsProductVertifyRecordMapper {
      * @param list 商品审核日志列表
      * @return 创建个数
      */
-    int insertList(@Param("list") List<PmsProductVertifyRecord> list);
+    int insertList(@Param("list") List<PmsProductVerifyRecord> list);
 }

@@ -1596,10 +1596,10 @@ CREATE TABLE `pms_product_operate_log`  (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for pms_product_vertify_record
+-- Table structure for pms_product_verify_record
 -- ----------------------------
-DROP TABLE IF EXISTS `pms_product_vertify_record`;
-CREATE TABLE `pms_product_vertify_record`  (
+DROP TABLE IF EXISTS `pms_product_verify_record`;
+CREATE TABLE `pms_product_verify_record`  (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `product_id` bigint(20) NULL DEFAULT NULL,
   `create_time` datetime NULL DEFAULT NULL,
@@ -1610,10 +1610,10 @@ CREATE TABLE `pms_product_vertify_record`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品审核记录' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of pms_product_vertify_record
+-- Records of pms_product_verify_record
 -- ----------------------------
-INSERT INTO `pms_product_vertify_record` VALUES (1, 1, '2018-04-27 16:36:41', 'test', 1, '验证通过');
-INSERT INTO `pms_product_vertify_record` VALUES (2, 2, '2018-04-27 16:36:41', 'test', 1, '验证通过');
+INSERT INTO `pms_product_verify_record` VALUES (1, 1, '2018-04-27 16:36:41', 'test', 1, '验证通过');
+INSERT INTO `pms_product_verify_record` VALUES (2, 2, '2018-04-27 16:36:41', 'test', 1, '验证通过');
 
 -- ----------------------------
 -- Table structure for pms_sku_stock

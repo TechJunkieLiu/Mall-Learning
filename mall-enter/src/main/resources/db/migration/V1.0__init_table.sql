@@ -668,10 +668,10 @@ CREATE TABLE `pms_product_operate_log`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
--- pms_product_vertify_record
+-- pms_product_verify_record
 -- ----------------------------
-DROP TABLE IF EXISTS `pms_product_vertify_record`;
-CREATE TABLE `pms_product_vertify_record`  (
+DROP TABLE IF EXISTS `pms_product_verify_record`;
+CREATE TABLE `pms_product_verify_record`  (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `product_id` bigint(20) NULL DEFAULT NULL,
   `create_time` datetime NULL DEFAULT NULL,

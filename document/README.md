@@ -55,7 +55,7 @@
     - pms_comment - 商品评价表
     - pms_comment_replay - 商品评价回复表
   - 商品审核及操作记录
-    - pms_product_vertify_record - 商品审核记录表（用于记录商品审核记录）
+    - pms_product_verify_record - 商品审核记录表（用于记录商品审核记录）
     - pms_product_operate_log - 商品操作记录表（用于记录商品操作记录）
 - OMS - 订单模块  
   - 订单

@@ -865,10 +865,10 @@ INSERT INTO `pms_product_ladder` VALUES (140, 40, 0, 0.00, 0.00);
 INSERT INTO `pms_product_ladder` VALUES (147, 26, 0, 0.00, 0.00);
 
 -- ----------------------------
--- pms_product_vertify_record
+-- pms_product_verify_record
 -- ----------------------------
-INSERT INTO `pms_product_vertify_record` VALUES (1, 1, '2018-04-27 16:36:41', 'test', 1, '验证通过');
-INSERT INTO `pms_product_vertify_record` VALUES (2, 2, '2018-04-27 16:36:41', 'test', 1, '验证通过');
+INSERT INTO `pms_product_verify_record` VALUES (1, 1, '2018-04-27 16:36:41', 'test', 1, '验证通过');
+INSERT INTO `pms_product_verify_record` VALUES (2, 2, '2018-04-27 16:36:41', 'test', 1, '验证通过');
 
 -- ----------------------------
 -- pms_sku_stock

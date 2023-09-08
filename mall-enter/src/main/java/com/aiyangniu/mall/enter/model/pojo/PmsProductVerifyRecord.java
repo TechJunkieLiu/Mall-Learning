@@ -9,13 +9,13 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 商品阶梯价格实体（只针对同商品）
+ * 商品审核记录实体
  *
  * @author lzq
  * @date 2023/05/31
  */
 @Data
-public class PmsProductVertifyRecord implements Serializable {
+public class PmsProductVerifyRecord implements Serializable {
 
     private static final long serialVersionUID = -208784732619440896L;
 

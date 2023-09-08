@@ -4,7 +4,7 @@
 
     <!--批量新增回写主键支持-->
     <insert id="insertList">
-        INSERT INTO pms_product_vertify_record (product_id, create_time, vertify_man,status, detail) VALUES
+        INSERT INTO pms_product_verify_record (product_id, create_time, vertify_man,status, detail) VALUES
         <foreach collection="list" separator="," item="item" index="index">
             (#{item.productId, jdbcType=BIGINT},
             #{item.createTime, jdbcType=TIMESTAMP},
