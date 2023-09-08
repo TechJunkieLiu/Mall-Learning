@@ -43,7 +43,7 @@ public class PmsProductServiceImpl implements PmsProductService {
     private final PmsProductAttributeValueMapper pmsProductAttributeValueMapper;
     private final CmsSubjectProductRelationMapper cmsSubjectProductRelationMapper;
     private final CmsPreferenceAreaProductRelationMapper cmsPreferenceAreaProductRelationMapper;
-    private final PmsProductVertifyRecordMapper pmsProductVertifyRecordMapper;
+    private final PmsProductVerifyRecordMapper pmsProductVerifyRecordMapper;
 
     @Override
     public int create(PmsProductParamDTO dto) {
@@ -195,10 +195,10 @@ public class PmsProductServiceImpl implements PmsProductService {
             record.setCreateTime(new Date());
             record.setDetail(detail);
             record.setStatus(verifyStatus);
-            record.setVertifyMan("test");
+            record.setVerifyMan("test");
             list.add(record);
         }
-        pmsProductVertifyRecordMapper.insertList(list);
+        pmsProductVerifyRecordMapper.insertList(list);
         return count;
     }
 

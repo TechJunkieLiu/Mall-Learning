@@ -11,7 +11,7 @@ import java.util.List;
  * @author lzq
  * @date 2023/05/31
  */
-public interface PmsProductVertifyRecordMapper {
+public interface PmsProductVerifyRecordMapper {
 
     /**
      * 批量创建

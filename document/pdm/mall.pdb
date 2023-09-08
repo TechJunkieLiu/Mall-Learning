@@ -8768,8 +8768,8 @@ LABL 0 新宋体,8,N</a:FontList>
 </o:Column>
 <o:Column Id="o391">
 <a:ObjectID>7E1BFDC6-E587-45E4-AE7C-8C3466279D4C</a:ObjectID>
-<a:Name>vertify_man</a:Name>
-<a:Code>vertify_man</a:Code>
+<a:Name>verify_man</a:Name>
+<a:Code>verify_man</a:Code>
 <a:CreationDate>1521710821</a:CreationDate>
 <a:Creator>zhenghong</a:Creator>
 <a:ModificationDate>1521711032</a:ModificationDate>

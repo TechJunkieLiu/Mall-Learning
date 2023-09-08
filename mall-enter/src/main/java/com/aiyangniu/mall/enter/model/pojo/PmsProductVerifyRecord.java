@@ -30,7 +30,7 @@ public class PmsProductVerifyRecord implements Serializable {
     private Date createTime;
 
     @ApiModelProperty(value = "审核人")
-    private String vertifyMan;
+    private String verifyMan;
 
     private Integer status;
 
