@@ -14,7 +14,7 @@
         <result column="delete_status" jdbcType="INTEGER" property="deleteStatus" />
         <result column="publish_status" jdbcType="INTEGER" property="publishStatus" />
         <result column="new_status" jdbcType="INTEGER" property="newStatus" />
-        <result column="recommand_status" jdbcType="INTEGER" property="recommandStatus" />
+        <result column="recommend_status" jdbcType="INTEGER" property="recommendStatus" />
         <result column="verify_status" jdbcType="INTEGER" property="verifyStatus" />
         <result column="sort" jdbcType="INTEGER" property="sort" />
         <result column="sale" jdbcType="INTEGER" property="sale" />

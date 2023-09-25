@@ -62,7 +62,7 @@ public class EsProduct implements Serializable {
 
     private Integer newStatus;
 
-    private Integer recommandStatus;
+    private Integer recommendStatus;
 
     private Integer stock;
 
