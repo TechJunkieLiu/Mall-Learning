@@ -212,7 +212,7 @@ public class PmsProductServiceImpl implements PmsProductService {
     @Override
     public int updateRecommendStatus(List<Long> ids, Integer recommendStatus) {
         PmsProduct record = new PmsProduct();
-        record.setRecommandStatus(recommendStatus);
+        record.setRecommendStatus(recommendStatus);
         return pmsProductMapper.update(record, new LambdaQueryWrapper<PmsProduct>().in(PmsProduct::getId, ids));
     }
 
