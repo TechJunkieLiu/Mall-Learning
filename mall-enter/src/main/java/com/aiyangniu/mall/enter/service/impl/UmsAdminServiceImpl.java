@@ -3,7 +3,7 @@ package com.aiyangniu.mall.enter.service.impl;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import com.aiyangniu.mall.common.exception.Asserts;
-import com.aiyangniu.mall.common.util.IpAddressUtil;
+import com.aiyangniu.mall.common.util.IpUtil;
 import com.aiyangniu.mall.common.util.SpringUtil;
 import com.aiyangniu.mall.enter.mapper.UmsAdminLoginLogMapper;
 import com.aiyangniu.mall.enter.mapper.UmsAdminMapper;
@@ -243,7 +243,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         loginLog.setCreateTime(new Date());
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
-        loginLog.setIp(IpAddressUtil.getIpAddress(request));
+        loginLog.setIp(IpUtil.getIpAddress(request));
         umsAdminLoginLogMapper.insert(loginLog);
     }
 }

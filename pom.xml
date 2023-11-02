@@ -46,7 +46,7 @@
         <easypoi-spring-boot-starter.version>4.4.0</easypoi-spring-boot-starter.version>
         <easypoi-base.version>4.4.0</easypoi-base.version>
         <httpclient.version>4.5.14</httpclient.version>
-        <httpmime.version>4.5.3</httpmime.version>
+        <httpcore.version>4.4.13</httpcore.version>
         <fastjson.version>1.2.83</fastjson.version>
         <flyway-core.version>4.1.2</flyway-core.version>
         <mysql-connector-java.version>8.0.29</mysql-connector-java.version>
@@ -55,6 +55,8 @@
         <spring-boot-starter-data-elasticsearch.version>2.7.5</spring-boot-starter-data-elasticsearch.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <thumbnailator.version>0.4.19</thumbnailator.version>
+        <UserAgentUtils.version>1.2.4</UserAgentUtils.version>
+        <ik-analyzer.version>8.4.0</ik-analyzer.version>
         <mall-common.version>1.0.0-SNAPSHOT</mall-common.version>
         <mall-security.version>1.0.0-SNAPSHOT</mall-security.version>
         <flyway-maven-plugin.version>4.0</flyway-maven-plugin.version>
@@ -211,23 +213,7 @@
                 <artifactId>easyexcel</artifactId>
                 <version>${easyexcel.version}</version>
             </dependency>
-            <!-- Poi -->
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi</artifactId>
-                <version>${poi.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi-ooxml</artifactId>
-                <version>${poi-ooxml.version}</version>
-            </dependency>
-            <!-- EasyPoi -->
-            <dependency>
-                <groupId>cn.afterturn</groupId>
-                <artifactId>easypoi-spring-boot-starter</artifactId>
-                <version>${easypoi-spring-boot-starter.version}</version>
-            </dependency>
+            <!-- EasyPOI -->
             <dependency>
                 <groupId>cn.afterturn</groupId>
                 <artifactId>easypoi-base</artifactId>
@@ -242,8 +228,8 @@
             <!-- 文件上传 -->
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpmime</artifactId>
-                <version>${httpmime.version}</version>
+                <artifactId>httpcore</artifactId>
+                <version>${httpcore.version}</version>
             </dependency>
             <!-- FastJson工具包 -->
             <dependency>
@@ -262,6 +248,18 @@
                 <groupId>net.coobird</groupId>
                 <artifactId>thumbnailator</artifactId>
                 <version>${thumbnailator.version}</version>
+            </dependency>
+            <!-- 解析User-Agent类库 -->
+            <dependency>
+                <groupId>nl.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>${UserAgentUtils.version}</version>
+            </dependency>
+            <!-- IKAnalyzer中文分词工具包 -->
+            <dependency>
+                <groupId>com.github.magese</groupId>
+                <artifactId>ik-analyzer</artifactId>
+                <version>${ik-analyzer.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
