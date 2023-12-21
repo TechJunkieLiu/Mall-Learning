@@ -1,10 +1,8 @@
-# Mall 商城
-
+# Mall
 ## 一、项目简介
-一套电商系统，包括前台商城系统及后台管理系统，基于SpringBoot+MyBatis实现。 
+`mall-learning`是一套电商系统（学习），包括前台商城系统及后台管理系统，基于SpringBoot+MyBatis实现。 
 前台商城系统包含首页门户、商品推荐、商品搜索、商品展示、购物车、订单流程、会员中心、客户服务、帮助中心等模块。 
 后台管理系统包含商品管理、订单管理、会员管理、促销管理、运营管理、内容管理、统计报表、财务管理、权限管理、设置等模块。
-
 ## 二、项目架构
   ```
   mall
@@ -13,7 +11,6 @@
   ├─ mall-enter -- 商城系统业务代码
   ├─ mall-security -- 封装SpringSecurity公用模块
   ```
-
 ## 三、功能模块
 - 商品模块
   - 商品管理
@@ -33,7 +30,6 @@
   - 人气推荐管理
   - 专题推荐管理
   - 首页广告管理
-
 ## 四、数据库表设计
 - PMS - 商品模块
   - 商品分类
@@ -101,9 +97,7 @@
   - 角色管理：可以自定义角色，并为角色分配菜单和资源
   - 动态菜单控制：系统管理员分配了所有菜单，商品管理员只分配了商品相关的菜单
   - 动态资源控制：商品管理员只分配了商品相关的资源，他无法访问其他资源（如订单模块）
-  
 ## 五、技术选型
-
 ### 1、后端技术
 | 技术                 | 说明                | 官网                                           |
 | -------------------- | ------------------- | ---------------------------------------------- |
@@ -129,7 +123,6 @@
 | PageHelper           | MyBatis物理分页插件 | http://git.oschina.net/free/Mybatis_PageHelper |
 | Swagger-UI           | API文档生成工具      | https://github.com/swagger-api/swagger-ui      |
 | Hibernator-Validator | 验证框架            | http://hibernate.org/validator                 |
-
 ### 2、前端技术
 | 技术       | 说明                  | 官网                                   |
 | ---------- | --------------------- | -------------------------------------- |
@@ -141,7 +134,6 @@
 | v-charts   | 基于Echarts的图表框架 | https://v-charts.js.org/               |
 | Js-cookie  | cookie管理工具        | https://github.com/js-cookie/js-cookie |
 | nprogress  | 进度条控件            | https://github.com/rstacruz/nprogress  |
-
 ### 3、开发工具
 | 工具          | 说明                | 官网                                            |
 | ------------- | ------------------- | ----------------------------------------------- |
@@ -160,7 +152,6 @@
 | Snipaste      | 屏幕截图工具        | https://www.snipaste.com/                       |
 | Postman       | API接口调试工具      | https://www.postman.com/                        |
 | Typora        | Markdown编辑器      | https://typora.io/                              |
-
 ### 4、开发环境
 | 工具          | 版本号 | 下载                                                         |
 | ------------- | ------ | ------------------------------------------------------------ |
@@ -173,44 +164,20 @@
 | Elasticsearch | 7.17.3 | https://www.elastic.co/downloads/elasticsearch               |
 | Logstash      | 7.17.3 | https://www.elastic.co/cn/downloads/logstash                 |
 | Kibana        | 7.17.3 | https://www.elastic.co/cn/downloads/kibana                   |
-
 ## 六、关键业务分析
-
 ### 1、SPU
-
 Standard Product Unit，标准商品单位，商品信息聚合的最小单位，是一组可复用、易检索的标准化信息的集合，该集合描述了一个商品的特性。
-
 ### 2、SKU
 Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货单元。举例：iphone xs 是一个 SPU，而 iphone xs 公开版 64G 银色是一个 SKU。
-
 ### 3、购物下单流程
 从商品加入购物车到下单的整个流程，涉及购物车优惠计算流程、确认单生成流程、下单流程及取消订单流程
-
-- 整体流程示意图
-
-  ![购物下单整体流程](D:\workspace-learning1\mall-learning\document\购物下单整体流程.png)
-
+- [购物下单整体流程](D:\workspace-learning1\mall-learning\document\购物下单整体流程.png)
 - 购物车优惠计算流程（待补充...）
-
-https://www.macrozheng.com/mall/database/mall_oms_02.html
-
 - 确认单生成流程（待补充...）
-
-  
-
 - 订单生成流程（下单流程）（待补充...）
-
-  
-
 - 订单取消流程（待补充...）
-
-
-
-
-
 ## 七、架构图
 ### 1、系统架构图
-![系统架构图](D:\workspace-learning1\mall-learning\document\系统架构图.jpg)
-
+[系统架构图](D:\workspace-learning1\mall-learning\document\系统架构图.jpg)
 ### 2、业务架构图
-![系统架构图](D:\workspace-learning1\mall-learning\document\业务架构图.png)
+[业务架构图](D:\workspace-learning1\mall-learning\document\业务架构图.png)
