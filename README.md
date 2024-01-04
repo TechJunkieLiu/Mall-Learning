@@ -171,13 +171,13 @@ Standard Product Unit，标准商品单位，商品信息聚合的最小单位�
 Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货单元。举例：iphone xs 是一个 SPU，而 iphone xs 公开版 64G 银色是一个 SKU。
 ### 3、购物下单流程
 从商品加入购物车到下单的整个流程，涉及购物车优惠计算流程、确认单生成流程、下单流程及取消订单流程
-- [购物下单整体流程](D:\workspace-learning1\mall-learning\document\购物下单整体流程.png)
+- [购物下单整体流程](D:\workspace-learning1\mall-learning\picture\购物下单整体流程.png)
 - 购物车优惠计算流程（待补充...）
 - 确认单生成流程（待补充...）
 - 订单生成流程（下单流程）（待补充...）
 - 订单取消流程（待补充...）
 ## 七、架构图
 ### 1、系统架构图
-[系统架构图](D:\workspace-learning1\mall-learning\document\系统架构图.jpg)
+[系统架构图](D:\workspace-learning1\mall-learning\picture\系统架构图.jpg)
 ### 2、业务架构图
-[业务架构图](D:\workspace-learning1\mall-learning\document\业务架构图.png)
+[业务架构图](D:\workspace-learning1\mall-learning\picture\业务架构图.png)
