@@ -79,11 +79,11 @@
         WHERE p.id = #{id};
     </select>
 
-    <select id="selectSubjectProductRelationByProductId" resultMap=" com.aiyangniu.mall.enter.mapper.CmsSubjectProductRelationMapper.BaseResultMap">
+    <select id="selectSubjectProductRelationByProductId" resultMap="com.aiyangniu.mall.enter.mapper.CmsSubjectProductRelationMapper.BaseResultMap">
         select * from cms_subject_product_relation where product_id = #{productId}
     </select>
 
-    <select id="selectPreferenceAreaProductRelationByProductId" resultMap=" com.aiyangniu.mall.enter.mapper.CmsPreferenceAreaProductRelationMapper.BaseResultMap">
+    <select id="selectPreferenceAreaProductRelationByProductId" resultMap="com.aiyangniu.mall.enter.mapper.CmsPreferenceAreaProductRelationMapper.BaseResultMap">
         select * from cms_preference_area_product_relation where product_id = #{productId}
     </select>
 
