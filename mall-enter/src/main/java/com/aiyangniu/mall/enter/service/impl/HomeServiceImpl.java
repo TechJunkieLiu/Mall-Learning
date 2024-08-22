@@ -61,7 +61,7 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public List<PmsProduct> recommendProductList(Integer pageSize, Integer pageNum) {
         // TODO 暂时默认推荐所有商品
-        PageHelper.startPage(pageNum,pageSize);
+        PageHelper.startPage(pageNum, pageSize);
         return pmsProductMapper.selectList(new LambdaQueryWrapper<PmsProduct>().eq(PmsProduct::getDeleteStatus, 0).eq(PmsProduct::getPublishStatus, 1));
     }
 
