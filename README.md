@@ -190,3 +190,47 @@ Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货�
 [系统架构图](D:\workspace-learning1\mall-learning\picture\系统架构图.jpg)
 ### 2、业务架构图
 [业务架构图](D:\workspace-learning1\mall-learning\picture\业务架构图.png)
+## 八、Windows环境部署
+- IDEA准备
+  - 开发工具下载安装环境配置
+  - 插件依赖下载配置
+- MySQL准备
+  - 数据库下载安装
+  - 客户端工具下载安装
+  - 数据库连接
+  - 数据初始化
+- Redis准备
+  - 下载安装
+  - 启动Redis服务：redis-server.exe redis.windows.conf
+- Elasticsearch
+  - 下载安装
+  - 插件下载，中文分词器（与ES对应版本），解压到ES的plugins目录
+  - 启动ES服务，bin目录下的elasticsearch.bat
+- Kibana
+  - 下载安装ES客户端
+  - 启动Kibana服务，bin目录下的kibana.bat
+  - 验证，打开Kibana用户界面，http://localhost:5601
+- Logstash
+  - 下载安装（注意对JDK版本要求）
+  - 修改配置文件，bin目录下logstash.conf
+  - 安装插件json_lines，安装命令`logstash-plugin install logstash-codec-json_lines`
+  - 启动Logstash服务，bin目录下的logstash.bat，启动命令`logstash -f logstash.conf`
+- MongoDB
+  - 下载安装
+  - 启动MongoDB服务，自带客户端，双击mongo.exe（移除命令`sc.exe delete MongoDB`）
+- RabbitMQ
+  - 下载安装Erlang
+  - 下载安装RabbitMQ
+  - 启动RabbitMQ服务，sbin目录下的rabbitmq-server.bat，启动命令`rabbitmq-plugins enable rabbitmq_management`
+  - 访问http://localhost:15672，默认账号密码guest:guest
+  - 配置：创建账号并设置管理员角色，创建新的虚拟host名称为/mall，给用户mall配置该虚拟host的权限
+- MinIO
+  - 下载安装
+  - 启动MinIO服务，启动命令`minio.exe server D:\minio\data --console-address ":9001"`
+  - MinIO的API运行在9000端口，客户管理端运行在9001端口
+  - 访问http://localhost:9001，默认账号密码minioadmin:minioadmin
+- OSS（该项目同时支持MinIO和OSS两种对象存储，选择其一即可）
+  - 开通OSS服务
+  - 创建存储空间
+  - 跨域资源共享（CORS）的设置
+- END

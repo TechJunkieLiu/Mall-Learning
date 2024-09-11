@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS `flyway_test`;
 CREATE TABLE `flyway_test`
 (
   `id`          bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',

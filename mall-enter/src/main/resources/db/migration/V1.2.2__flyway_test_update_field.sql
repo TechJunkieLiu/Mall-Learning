@@ -1,0 +1,1 @@
+ALTER TABLE flyway_test ADD COLUMN password VARCHAR(64) DEFAULT NULL COMMENT '密码' AFTER username;
