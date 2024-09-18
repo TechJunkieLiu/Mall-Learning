@@ -180,16 +180,16 @@ Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货�
 在多商城系统中，购物车可以根据不同的店铺分别生成订单，而单商城系统则通常生成一个总的订单。这表明，购物车、确认单和订单之间的关系和实现方式会根据具体的商城类型（B2C或C2C）以及系统设计而有所不同‌
 ### 4、购物下单流程
 从商品加入购物车到下单的整个流程，涉及购物车优惠计算流程、确认单生成流程、下单流程及取消订单流程
-- [购物下单整体流程](D:\workspace-learning1\mall-learning\picture\购物下单整体流程.png)
+- [购物下单整体流程](D:\workspace_learning\one\Mall-Learning\document\picture\购物下单整体流程.png)
 - 购物车优惠计算流程（待补充...）
 - 确认单生成流程（待补充...）
 - 订单生成流程（下单流程）（待补充...） 
 - 订单取消流程（待补充...）
 ## 七、架构图
 ### 1、系统架构图
-[系统架构图](D:\workspace-learning1\mall-learning\picture\系统架构图.jpg)
+[系统架构图](D:\workspace_learning\one\Mall-Learning\document\picture\系统架构图.jpg)
 ### 2、业务架构图
-[业务架构图](D:\workspace-learning1\mall-learning\picture\业务架构图.png)
+[业务架构图](D:\workspace_learning\one\Mall-Learning\document\picture\业务架构图.png)
 ## 八、Windows环境部署
 - IDEA准备
   - 开发工具下载安装环境配置
