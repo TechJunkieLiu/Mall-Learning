@@ -190,7 +190,7 @@ Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货�
 [系统架构图](D:\workspace_learning\one\Mall-Learning\document\picture\系统架构图.jpg)
 ### 2、业务架构图
 [业务架构图](D:\workspace_learning\one\Mall-Learning\document\picture\业务架构图.png)
-## 八、Windows环境部署
+## 八、Windows应用部署
 - IDEA准备
   - 开发工具下载安装环境配置
   - 插件依赖下载配置
@@ -234,3 +234,140 @@ Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货�
   - 创建存储空间
   - 跨域资源共享（CORS）的设置
 - END
+## 九、基于Docker的应用部署（SpringBoot）
+### 1、服务器规划
+单机部署所有服务，服务器（192.168.146.27）：用于部署mall-learning的依赖服务+应用服务。
+### 2、环境搭建
+| 工具          | 版本号 | 下载                                                         |
+| ------------- | ------ | ------------------------------------------------------------ |
+| JDK           | 1.8    | https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html |
+| Mysql         | 5.7    | https://www.mysql.com/                                       |
+| Redis         | 5.0    | https://redis.io/download                                    |
+| Elasticsearch | 7.6.2  | https://www.elastic.co/cn/downloads/elasticsearch            |
+| Kibana        | 7.6.2  | https://www.elastic.co/cn/downloads/kibana                   |
+| Logstash      | 7.6.2  | https://www.elastic.co/cn/downloads/logstash                 |
+| MongoDb       | 4.2.5  | https://www.mongodb.com/download-center                      |
+| RabbitMq      | 3.7.14 | http://www.rabbitmq.com/download.html                        |
+| nginx         | 1.10   | http://nginx.org/en/download.html                            |
+
+- Docker环境安装
+  - 安装 yum-utils，`yum install -y yum-utils device-mapper-persistent-data lvm2`
+  - 设置国内docker镜像源，`yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`
+  - 安装 docker 服务（社区版），`yum install docker-ce`
+  - 启动 docker 服务，`systemctl start docker`
+- MySQL
+  - 拉取镜像，下载MySQL5.7的docker镜像，`docker pull mysql:5.7`
+  - 启动MySQL服务，`docker run -p 3306:3306 --name mysql \
+    -v /mydata/mysql/log:/var/log/mysql \
+    -v /mydata/mysql/data:/var/lib/mysql \
+    -v /mydata/mysql/conf:/etc/mysql \
+    -e MYSQL_ROOT_PASSWORD=root  \
+    -d mysql:5.7`
+  - MySQL配置
+- Redis
+  - 拉取镜像，下载Redis7的docker镜像，`docker pull redis:7`
+  - 启动Redis服务，`docker run --name redis --restart=always -p 6379:6379 \
+    -v /data/redis/conf/redis.conf:/data/redis/conf/redis.conf \
+    -v /data/redis/data:/data/redis/data \
+    -v /data/redis/log/redis.log:/data/redis/log/redis.log \
+    -d redis redis-server /data/redis/conf/redis.conf`
+  - Redis配置
+- Nginx
+  - 拉取镜像，下载Nginx1.22的docker镜像，`docker pull nginx:1.22`
+  - 启动Nginx服务，`docker run -p 80:80 --name nginx \
+    -v /mydata/nginx/html:/usr/share/nginx/html \
+    -v /mydata/nginx/logs:/var/log/nginx  \
+    -v /mydata/nginx/conf:/etc/nginx \
+    -d nginx:1.22`
+  - Nginx配置
+- RabbitMQ
+  - 拉取镜像，下载rabbitmq3.10-management的docker镜像，`docker pull rabbitmq:3.10-management`
+  - 启动RabbitMQ服务，`docker run -p 5672:5672 -p 15672:15672 --name rabbitmq \
+    -v /mydata/rabbitmq/data:/var/lib/rabbitmq \
+    -d rabbitmq:3.9-management`
+  - RabbitMQ配置
+  - 登录Web验证
+- Elasticsearch
+  - 拉取镜像，下载Elasticsearch7.17.3的docker镜像，`docker pull elasticsearch:7.17.3`
+  - 启动RabbitMQ服务，`docker run -p 9200:9200 -p 9300:9300 --name elasticsearch \
+    -e "discovery.type=single-node" \
+    -e "cluster.name=elasticsearch" \
+    -e "ES_JAVA_OPTS=-Xms512m -Xmx1024m" \
+    -v /mydata/elasticsearch/plugins:/usr/share/elasticsearch/plugins \
+    -v /mydata/elasticsearch/data:/usr/share/elasticsearch/data \
+    -d elasticsearch:7.17.3`
+  - Elasticsearch配置
+  - 安装中文分词器插件IKAnalyzer（对应版本）
+  - 使用curl测试链接
+- Logstash
+  - 拉取镜像，下载Logstash7.17.3的docker镜像，`docker pull logstash:7.17.3`
+  - 启动RabbitMQ服务，`docker run --name logstash -p 4560:4560 -p 4561:4561 -p 4562:4562 -p 4563:4563 \
+    --link elasticsearch:es \
+    -v /mydata/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
+    -d logstash:7.17.3`
+  - Logstash配置
+  - 安装插件json_lines
+- Kibana
+  - 拉取镜像，下载Kibana7.17.3的docker镜像，`docker pull kibana:7.17.3`
+  - 启动RabbitMQ服务，`docker run --name kibana -p 5601:5601 \
+    --link elasticsearch:es \
+    -e "elasticsearch.hosts=http://es:9200" \
+    -d kibana:7.17.3`
+  - Kibana配置
+  - 访问测试
+- MongoDB
+  - 拉取镜像，下载MongoDB4的docker镜像，`docker pull mongo:4`
+  - 启动RabbitMQ服务，`docker run -p 27017:27017 --name mongo \
+    -v /mydata/mongo/db:/data/db \
+    -d mongo:4`
+  - MongoDB配置
+- MinIO
+  - 拉取镜像，下载MinIO的Docker镜像，`docker pull minio/minio`
+  - 启动RabbitMQ服务，`docker run -p 9090:9000 -p 9001:9001 --name minio \
+    -v /mydata/minio/data:/data \
+    -e MINIO_ROOT_USER=minioadmin \
+    -e MINIO_ROOT_PASSWORD=minioadmin \
+    -d minio/minio server /data --console-address ":9001"`
+  - MinIO配置
+  - 访问测试
+
+**注意：**
+> 1、挂载文件目录及其访问权限问题（权限 chmod -R 777 xxx）
+>
+> 2、所有下载镜像文件 [下载镜像](D:\workspace_learning\two\Mall-Learning-Cloud\document\picture\docker镜像.png)
+>
+> 3、所有运行在容器里面的应用 [运行容器](D:\workspace_learning\two\Mall-Learning-Cloud\document\picture\docker运行容器.png)
+
+### 3、项目部署
+- 构建所有Docker镜像并上传
+  - 修改项目根目录的pom.xml中的docker.host属性
+  - 打开项目根目录的pom.xml中docker-maven-plugin的<executions>节点，使项目在打包时直接构建docker镜像
+  - 修改yml配置文件，运行各个Application确保都能跑起来（或者先clean、package，直接修改target目录下的配置文件）
+  - 双击根项目mall的package命令可以一次性打包所有应用的docker镜像
+- 部署mall-admin，`docker run -p 38080:8080 --name mall-admin \
+    --link mysql:db \
+    --link redis:redis \
+    --link logstash:logstash \
+    -v /etc/localtime:/etc/localtime \
+    -v /mydata/app/admin/logs:/var/logs \
+    -d mall/mall-admin:1.0-SNAPSHOT`
+- 部署mall-search，`docker run -p 38081:8081 --name mall-search \
+    --link elasticsearch:es \
+    --link mysql:db \
+    -v /etc/localtime:/etc/localtime \
+    -v /mydata/app/search/logs:/var/logs \
+    -d mall/mall-search:1.0-SNAPSHOT`
+- 部署mall-gate，`docker run -p 38085:8085 --name mall-portal \
+    --link mysql:db \
+    --link redis:redis \
+    --link mongo:mongo \
+    --link rabbitmq:rabbit \
+    -v /etc/localtime:/etc/localtime \
+    -v /mydata/app/portal/logs:/var/logs \
+    -d mall/mall-portal:1.0-SNAPSHOT`
+- 开启防火墙
+  - `firewall-cmd --zone=public --add-port=8080/tcp --permanent`
+  - `firewall-cmd --zone=public --add-port=8081/tcp --permanent`
+  - `firewall-cmd --zone=public --add-port=8085/tcp --permanent`
+  - `firewall-cmd --reload`
+- 访问接口测试
