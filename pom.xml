@@ -26,8 +26,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <skipTests>true</skipTests>
-        <docker.host>http://192.168.3.101:2375</docker.host>
-        <docker.maven.plugin.version>0.40.2</docker.maven.plugin.version>
+        <docker.host>http://192.168.146.27:2375</docker.host>
+        <docker.maven.plugin.version>1.2.2</docker.maven.plugin.version>
         <pagehelper-starter.version>1.4.5</pagehelper-starter.version>
         <pagehelper.version>5.3.2</pagehelper.version>
         <hutool.version>5.8.9</hutool.version>
@@ -288,43 +288,10 @@
         <finalName>mall-learning</finalName>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-                <plugin>
-                    <groupId>org.flywaydb</groupId>
-                    <artifactId>flyway-maven-plugin</artifactId>
-                    <version>${flyway-maven-plugin.version}</version>
-                    <configuration>
-                        <url>jdbc:mysql://localhost:3306/mall?characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</url>
-                        <user>root</user>
-                        <password>root</password>
-                        <driver>com.mysql.jdbc.Driver</driver>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.*</include>
-                </includes>
-            </resource>
-        </resources>
-
-<!--        <pluginManagement>-->
-<!--            <plugins>-->
-<!--                <plugin>-->
-<!--                    <groupId>org.springframework.boot</groupId>-->
-<!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                </plugin>-->
 <!--                <plugin>-->
 <!--                    <groupId>org.flywaydb</groupId>-->
 <!--                    <artifactId>flyway-maven-plugin</artifactId>-->
-<!--                    <version>4.0</version>-->
+<!--                    <version>${flyway-maven-plugin.version}</version>-->
 <!--                    <configuration>-->
 <!--                        <url>jdbc:mysql://localhost:3306/mall?characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</url>-->
 <!--                        <user>root</user>-->
@@ -332,52 +299,39 @@
 <!--                        <driver>com.mysql.jdbc.Driver</driver>-->
 <!--                    </configuration>-->
 <!--                </plugin>-->
-<!--                <plugin>-->
-<!--                    <groupId>io.fabric8</groupId>-->
-<!--                    <artifactId>docker-maven-plugin</artifactId>-->
-<!--                    <version>${docker.maven.plugin.version}</version>-->
-<!--                    <executions>-->
-<!--                        &lt;!&ndash;如果想在项目打包时构建镜像添加&ndash;&gt;-->
-<!--                        <execution>-->
-<!--                            <id>build-image</id>-->
-<!--                            <phase>package</phase>-->
-<!--                            <goals>-->
-<!--                                <goal>build</goal>-->
-<!--                            </goals>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                    <configuration>-->
-<!--                        &lt;!&ndash; Docker 远程管理地址&ndash;&gt;-->
-<!--                        <dockerHost>${docker.host}</dockerHost>-->
-<!--                        <images>-->
-<!--                            <image>-->
-<!--                                &lt;!&ndash;定义镜像名称&ndash;&gt;-->
-<!--                                <name>mall-learning/${project.name}:${project.version}</name>-->
-<!--                                &lt;!&ndash;定义镜像构建行为&ndash;&gt;-->
-<!--                                <build>-->
-<!--                                    &lt;!&ndash;定义基础镜像&ndash;&gt;-->
-<!--                                    <from>openjdk:8</from>-->
-<!--                                    <args>-->
-<!--                                        <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>-->
-<!--                                    </args>-->
-<!--                                    &lt;!&ndash;定义哪些文件拷贝到容器中&ndash;&gt;-->
-<!--                                    <assembly>-->
-<!--                                        &lt;!&ndash;定义拷贝到容器的目录&ndash;&gt;-->
-<!--                                        <targetDir>/</targetDir>-->
-<!--                                        &lt;!&ndash;只拷贝生成的jar包&ndash;&gt;-->
-<!--                                        <descriptorRef>artifact</descriptorRef>-->
-<!--                                    </assembly>-->
-<!--                                    &lt;!&ndash;定义容器启动命令&ndash;&gt;-->
-<!--                                    <entryPoint>["java", "-jar","-Dspring.profiles.active=prod","/${project.build.finalName}.jar"]</entryPoint>-->
-<!--                                    &lt;!&ndash;定义维护者&ndash;&gt;-->
-<!--                                    <maintainer>lzq</maintainer>-->
-<!--                                </build>-->
-<!--                            </image>-->
-<!--                        </images>-->
-<!--                    </configuration>-->
-<!--                </plugin>-->
-<!--            </plugins>-->
-<!--        </pluginManagement>-->
-
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${docker.maven.plugin.version}</version>
+                    <executions>
+                        <!-- 项目打包时构建镜像 -->
+                        <execution>
+                            <id>build-image</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <imageName>mall/${project.artifactId}:${project.version}</imageName>
+                        <dockerHost>${docker.host}</dockerHost>
+                        <baseImage>openjdk:8</baseImage>
+                        <entryPoint>["java", "-jar", "-Dspring.profiles.active=prod","/${project.build.finalName}.jar"]</entryPoint>
+                        <resources>
+                            <resource>
+                                <targetPath>/</targetPath>
+                                <directory>${project.build.directory}</directory>
+                                <include>${project.build.finalName}.jar</include>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 </project>

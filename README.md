@@ -190,7 +190,7 @@ Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货�
 [系统架构图](D:\workspace_learning\one\Mall-Learning\document\picture\系统架构图.jpg)
 ### 2、业务架构图
 [业务架构图](D:\workspace_learning\one\Mall-Learning\document\picture\业务架构图.png)
-## 八、Windows应用部署
+## 八、Windows 应用部署
 - IDEA准备
   - 开发工具下载安装环境配置
   - 插件依赖下载配置
@@ -233,23 +233,10 @@ Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货�
   - 开通OSS服务
   - 创建存储空间
   - 跨域资源共享（CORS）的设置
-- END
-## 九、基于Docker的应用部署（SpringBoot）
+## 九、Linux 应用部署（基于Docker的SpringBoot项目）
 ### 1、服务器规划
-单机部署所有服务，服务器（192.168.146.27）：用于部署mall-learning的依赖服务+应用服务。
+单机部署所有服务，Linux 服务器 192.168.146.27，用于部署 mall-learning 的依赖服务 + 应用服务
 ### 2、环境搭建
-| 工具          | 版本号 | 下载                                                         |
-| ------------- | ------ | ------------------------------------------------------------ |
-| JDK           | 1.8    | https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html |
-| Mysql         | 5.7    | https://www.mysql.com/                                       |
-| Redis         | 5.0    | https://redis.io/download                                    |
-| Elasticsearch | 7.6.2  | https://www.elastic.co/cn/downloads/elasticsearch            |
-| Kibana        | 7.6.2  | https://www.elastic.co/cn/downloads/kibana                   |
-| Logstash      | 7.6.2  | https://www.elastic.co/cn/downloads/logstash                 |
-| MongoDb       | 4.2.5  | https://www.mongodb.com/download-center                      |
-| RabbitMq      | 3.7.14 | http://www.rabbitmq.com/download.html                        |
-| nginx         | 1.10   | http://nginx.org/en/download.html                            |
-
 - Docker环境安装
   - 安装 yum-utils，`yum install -y yum-utils device-mapper-persistent-data lvm2`
   - 设置国内docker镜像源，`yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`
@@ -334,40 +321,32 @@ Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货�
 **注意：**
 > 1、挂载文件目录及其访问权限问题（权限 chmod -R 777 xxx）
 >
-> 2、所有下载镜像文件 [下载镜像](D:\workspace_learning\two\Mall-Learning-Cloud\document\picture\docker镜像.png)
+> 2、所有下载的[镜像文件](D:\workspace_learning\one\Mall-Learning\document\picture\docker镜像.png)
 >
-> 3、所有运行在容器里面的应用 [运行容器](D:\workspace_learning\two\Mall-Learning-Cloud\document\picture\docker运行容器.png)
+> 3、所有容器中的[运行应用](D:\workspace_learning\one\Mall-Learning\document\picture\docker运行容器.png)
 
-### 3、项目部署
+### 3、应用部署
 - 构建所有Docker镜像并上传
-  - 修改项目根目录的pom.xml中的docker.host属性
-  - 打开项目根目录的pom.xml中docker-maven-plugin的<executions>节点，使项目在打包时直接构建docker镜像
-  - 修改yml配置文件，运行各个Application确保都能跑起来（或者先clean、package，直接修改target目录下的配置文件）
-  - 双击根项目mall的package命令可以一次性打包所有应用的docker镜像
-- 部署mall-admin，`docker run -p 38080:8080 --name mall-admin \
-    --link mysql:db \
-    --link redis:redis \
-    --link logstash:logstash \
-    -v /etc/localtime:/etc/localtime \
-    -v /mydata/app/admin/logs:/var/logs \
-    -d mall/mall-admin:1.0-SNAPSHOT`
-- 部署mall-search，`docker run -p 38081:8081 --name mall-search \
-    --link elasticsearch:es \
-    --link mysql:db \
-    -v /etc/localtime:/etc/localtime \
-    -v /mydata/app/search/logs:/var/logs \
-    -d mall/mall-search:1.0-SNAPSHOT`
-- 部署mall-gate，`docker run -p 38085:8085 --name mall-portal \
+  - 引入 docker-maven-plugin 插件，并进行相应配置
+    - 修改 executions 节点，使项目在打包时直接构建 docker 镜像
+    - 修改 docker.host 属性（确保`telnet 192.168.146.27 2375`可访问）
+    - 修改 imageName、baseImage 等镜像名称、基础镜像
+  - 修改各服务的 yml 配置文件，确保都能跑起来（或者先 clean、package，直接修改 target 目录下的配置文件）
+  - 双击 package 命令或者执行 `mvn clean package docker:build`，打包所有[应用docker镜像](D:\workspace_learning\one\Mall-Learning\document\picture\docker应用镜像.png)
+
+- 部署 mall-enter，执行命令
+`docker run -p 38888:8888 --name mall-enter \
     --link mysql:db \
     --link redis:redis \
     --link mongo:mongo \
     --link rabbitmq:rabbit \
+    --link logstash:logstash \
+    --link elasticsearch:es \
     -v /etc/localtime:/etc/localtime \
-    -v /mydata/app/portal/logs:/var/logs \
-    -d mall/mall-portal:1.0-SNAPSHOT`
+    -v /mydata/app/enter/logs:/var/logs \
+    -d mall/mall-enter:1.0.0-SNAPSHOT`
+
 - 开启防火墙
-  - `firewall-cmd --zone=public --add-port=8080/tcp --permanent`
-  - `firewall-cmd --zone=public --add-port=8081/tcp --permanent`
-  - `firewall-cmd --zone=public --add-port=8085/tcp --permanent`
+  - `firewall-cmd --zone=public --add-port=8888/tcp --permanent`
   - `firewall-cmd --reload`
 - 访问接口测试
