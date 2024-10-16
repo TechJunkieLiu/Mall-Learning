@@ -235,7 +235,8 @@ Stock Keeping Unit，库存量单位，是物理上不可分割的最小存货�
   - 跨域资源共享（CORS）的设置
 ## 九、Linux 应用部署（基于Docker的SpringBoot项目）
 ### 1、服务器规划
-单机部署所有服务，Linux 服务器 192.168.146.27，用于部署 mall-learning 的依赖服务 + 应用服务
+一台服务器部署所有服务：
+- 基础服务+应用服务（192.168.146.27）：用于部署 mall-learning 的依赖服务 + 应用服务，包括 MySQL、Redis、Elasticsearch、mall-enter 等服务，均采用 Docker 方式来部署。
 ### 2、环境搭建
 - Docker环境安装
   - 安装 yum-utils，`yum install -y yum-utils device-mapper-persistent-data lvm2`
